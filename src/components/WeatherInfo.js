@@ -7,7 +7,7 @@ function WeatherInfo(props) {
     <React.Fragment>
       <h3>{desc}</h3>
       <img
-        src={`http://openweathermap.org/img/wn/${icon}.png`}
+        src={`https://openweathermap.org/img/wn/${icon}.png`}
         alt="weather-icon"
       ></img>
       <section className="weather-data-flex">
