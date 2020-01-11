@@ -2,10 +2,14 @@ import React from "react";
 import "../styles/Weather.css";
 
 function WeatherInfo(props) {
-  const { temp, humidity, desc, city } = props.data;
+  const { temp, humidity, desc, city, icon } = props.data;
   return (
     <React.Fragment>
       <h3>{desc}</h3>
+      <img
+        src={`http://openweathermap.org/img/wn/${icon}.png`}
+        alt="weather-icon"
+      ></img>
       <section className="weather-data-flex">
         <div className="header-description">
           <h4>City</h4>

@@ -3,7 +3,7 @@ import "../styles/Weather.css";
 import WeatherInfo from "../components/WeatherInfo";
 
 function Weather() {
-  const API_KEY = "63374cfea606656fd08c6a5045d09eef";
+  const API_KEY = "753ac4f8f1658bb87e5013e530692bd6";
   const [searchQuery, setSearchQuery] = useState();
   const [weatherData, setWeatherData] = useState({
     temp: null,
@@ -44,7 +44,8 @@ function Weather() {
           temp: KelvinToCelsius(data.main.temp),
           humidity: data.main.humidity,
           desc: data.weather[0].main,
-          city: data.name
+          city: data.name,
+          icon: data.weather[0].icon
         })
       );
   };
@@ -59,7 +60,7 @@ function Weather() {
           {" "}
           Weatherify
           <span aria-label="emoji-rain" role="img">
-            ⚡️
+            🌎
           </span>
         </h3>
         <div>
