@@ -5,11 +5,14 @@ function WeatherInfo(props) {
   const { temp, humidity, desc, city, icon } = props.data;
   return (
     <React.Fragment>
-      <h3>{desc}</h3>
-      <img
-        src={`https://openweathermap.org/img/wn/${icon}.png`}
-        alt="weather-icon"
-      ></img>
+      <div className="description-icon">
+        <img
+          src={`https://openweathermap.org/img/wn/${icon}.png`}
+          alt="weather-icon"
+          className="img-icon"
+        ></img>
+        <h3>{desc}</h3>
+      </div>
       <section className="weather-data-flex">
         <div className="header-description">
           <h4>City</h4>
@@ -18,7 +21,7 @@ function WeatherInfo(props) {
         <div className="header-description">
           <h4>Temperature</h4>
           <p>
-            {temp} <span className="degree-symbol"></span>C
+            {temp} <span className="degree-symbol"></span> C
           </p>
         </div>
         <div className="header-description">
